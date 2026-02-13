@@ -1,4 +1,4 @@
-const GRID_SIZE = 32;
+const GRID_SIZE = 24;
 const TILE_COUNT = 20;
 const APP_VERSION = '1.0.0';
 const APP_UPDATED = '2026-02-13';
