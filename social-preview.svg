@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Happy Snake social preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8fd3ff"/>
+      <stop offset="55%" stop-color="#b9e8ff"/>
+      <stop offset="100%" stop-color="#f1fbff"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#def0ff" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="70" y="70" width="1060" height="490" rx="26" fill="url(#panel)" stroke="#90c6ff"/>
+  <text x="130" y="220" font-family="Segoe UI, Arial, sans-serif" font-size="88" font-weight="700" fill="#2466bf">Happy Snake</text>
+  <text x="130" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="36" fill="#2f5b94">Kid-friendly snake game with swipe controls</text>
+  <text x="130" y="338" font-family="Segoe UI, Arial, sans-serif" font-size="32" fill="#2f5b94">Multiple modes • Dynamic maps • Accessible UI</text>
+
+  <rect x="740" y="145" width="320" height="320" rx="24" fill="#10224f" stroke="#6ab0ff"/>
+  <g opacity="0.22" stroke="#2f5b94" stroke-width="1">
+    <path d="M772 145V465"/><path d="M804 145V465"/><path d="M836 145V465"/><path d="M868 145V465"/>
+    <path d="M900 145V465"/><path d="M932 145V465"/><path d="M964 145V465"/><path d="M996 145V465"/>
+    <path d="M1028 145V465"/><path d="M1060 145V465"/>
+    <path d="M740 177H1060"/><path d="M740 209H1060"/><path d="M740 241H1060"/><path d="M740 273H1060"/>
+    <path d="M740 305H1060"/><path d="M740 337H1060"/><path d="M740 369H1060"/><path d="M740 401H1060"/>
+    <path d="M740 433H1060"/>
+  </g>
+  <path d="M800 330c0-36 29-65 65-65h38c31 0 56 25 56 56s-25 56-56 56h-45" fill="none" stroke="#8ff2ff" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="876" cy="264" r="5" fill="#0f1f44"/>
+  <circle cx="892" cy="264" r="5" fill="#0f1f44"/>
+  <circle cx="815" cy="392" r="10" fill="#ff82ac"/>
+</svg>

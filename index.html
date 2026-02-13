@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Happy Snake is a kid-friendly snake game with swipe controls, multiple difficulty modes, and colorful dynamic maps.">
+    <meta property="og:title" content="Happy Snake">
+    <meta property="og:description" content="A kid-friendly snake game with swipe controls, multiple modes, and dynamic maps.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="social-preview.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Happy Snake">
+    <meta name="twitter:description" content="A kid-friendly snake game with swipe controls, multiple modes, and dynamic maps.">
+    <meta name="twitter:image" content="social-preview.svg">
+    <title>Happy Snake</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="helpOverlay" class="help-overlay is-hidden" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+        <div class="help-card">
+            <h2 id="helpTitle">How to Play</h2>
+            <p>Eat snacks, avoid walls and your tail, and reach higher levels.</p>
+            <ul>
+                <li>Swipe on the board, tap arrows, or use keyboard.</li>
+                <li>Golden snack gives bonus points.</li>
+                <li>Shield orb gives temporary safety.</li>
+            </ul>
+            <button id="closeHelpBtn" type="button">Got it!</button>
+        </div>
+    </div>
+    <div class="game-container">
+        <h1>Happy Snake</h1>
+        <div class="score-board">
+            <span class="stat">Score <strong id="score">0</strong></span>
+            <span class="stat">High <strong id="highScore">0</strong></span>
+            <span class="stat">Level <strong id="level">1</strong></span>
+            <span class="stat">Speed <strong id="speed">1.0x</strong></span>
+            <span class="stat">Combo <strong id="combo">x1</strong></span>
+            <span class="stat">Mode <strong id="modeLabel">Kindergarten</strong></span>
+            <span class="stat map-stat">Map <strong id="mapName">-</strong></span>
+        </div>
+        <div id="ariaStatus" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+        <div id="status" class="status">Collect food to start your streak.</div>
+        <canvas id="gameCanvas" width="400" height="400">Your browser does not support canvas. Please use a modern browser to play Happy Snake.</canvas>
+        <div class="controls">
+            <button id="startBtn">Start Game</button>
+            <button id="pauseBtn" disabled>Pause</button>
+            <button id="soundBtn" type="button" aria-pressed="true">Sound: On</button>
+        </div>
+        <div class="touch-controls" aria-label="Touch direction controls">
+            <button id="touchUp" type="button">▲</button>
+            <div class="touch-middle">
+                <button id="touchLeft" type="button">◀</button>
+                <button id="touchDown" type="button">▼</button>
+                <button id="touchRight" type="button">▶</button>
+            </div>
+        </div>
+        <div class="touch-hint">Swipe on the game board to move with your hand</div>
+        <div class="mode-picker">
+            <label for="modeSelect">Game Mode</label>
+            <select id="modeSelect">
+                <option value="kindergarten">Kindergarten</option>
+                <option value="beginner" selected>Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+                <option value="insane">Insane</option>
+            </select>
+        </div>
+        <div class="legend" aria-label="Game item legend">
+            <h2>What you see</h2>
+            <div class="legend-grid">
+                <div class="legend-item"><span class="legend-dot normal-food"></span> Food: yummy points</div>
+                <div class="legend-item"><span class="legend-dot golden-food"></span> Golden snack: extra points</div>
+                <div class="legend-item"><span class="legend-dot shield-item">S</span> Shield orb: safety power</div>
+                <div class="legend-item"><span class="legend-dot portal-item"></span> Portals: quick tunnel</div>
+                <div class="legend-item"><span class="legend-dot drone-item"></span> Pink bot: avoid it</div>
+                <div class="legend-item"><span class="legend-dot obstacle-item"></span> Block: do not hit</div>
+            </div>
+        </div>
+        <div class="instructions">
+            <p>Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to move</p>
+            <p>Press <strong>Space</strong> to pause/resume</p>
+            <p>For young kids, choose <strong>Kindergarten</strong> mode</p>
+            <p>Pick Kindergarten, Beginner, Intermediate, Advanced, or Insane before starting</p>
+            <p>Each level changes to a different map layout</p>
+            <p>Each mode has a different Max Level target</p>
+            <p>After Max Level, earn a little more score to complete the mode</p>
+            <p>Golden snacks give bonus points, Shield gives extra safety</p>
+            <p>Portals and pink bots appear more in later levels</p>
+        </div>
+        <div class="footer-meta" aria-label="Build information">
+            <span id="versionLabel">Version 1.0.0</span>
+            <span>•</span>
+            <span id="updatedLabel">Updated 2026-02-13</span>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
